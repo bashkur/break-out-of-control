@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\MyProjects\\GMTK_GameJam_2020\\Source\\GMTK_GameJam_2020\\GMTK_GameJam_2020.Build.cs",
+		"E:\\MyProjects\\GMTK_GameJam_2020\\Source\\GMTK_GameJam_2020.Target.cs",
+		"E:\\MyProjects\\GMTK_GameJam_2020\\Source\\GMTK_GameJam_2020Editor.Target.cs"
+	],
+	"EngineVersion": "4.25.1"
+}
