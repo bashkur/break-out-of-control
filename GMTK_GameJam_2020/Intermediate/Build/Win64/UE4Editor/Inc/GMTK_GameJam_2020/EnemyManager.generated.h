@@ -58,7 +58,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AEnemyManager); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AEnemyManager)
 
 
-#define GMTK_GameJam_2020_Source_GMTK_GameJam_2020_EnemyManager_h_12_PRIVATE_PROPERTY_OFFSET
+#define GMTK_GameJam_2020_Source_GMTK_GameJam_2020_EnemyManager_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__Enemy() { return STRUCT_OFFSET(AEnemyManager, Enemy); } \
+	FORCEINLINE static uint32 __PPO__columns() { return STRUCT_OFFSET(AEnemyManager, columns); } \
+	FORCEINLINE static uint32 __PPO__rows() { return STRUCT_OFFSET(AEnemyManager, rows); } \
+	FORCEINLINE static uint32 __PPO__horizontalSpacing() { return STRUCT_OFFSET(AEnemyManager, horizontalSpacing); } \
+	FORCEINLINE static uint32 __PPO__verticalSpacing() { return STRUCT_OFFSET(AEnemyManager, verticalSpacing); }
+
+
 #define GMTK_GameJam_2020_Source_GMTK_GameJam_2020_EnemyManager_h_9_PROLOG
 #define GMTK_GameJam_2020_Source_GMTK_GameJam_2020_EnemyManager_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

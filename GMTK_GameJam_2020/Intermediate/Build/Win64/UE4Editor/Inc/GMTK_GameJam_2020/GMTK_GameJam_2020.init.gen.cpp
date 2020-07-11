@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeGMTK_GameJam_2020_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xF5B00C32,
+				0x2CEC89F0,
 				0x1BC933B9,
 				METADATA_PARAMS(nullptr, 0)
 			};
