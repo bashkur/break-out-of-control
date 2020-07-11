@@ -1,0 +1,3 @@
+D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\Definitions.GMTK_GameJam_2020.h
+D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Source\GMTK_GameJam_2020\EnemyManager.h
+D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Inc\GMTK_GameJam_2020\EnemyManager.generated.h

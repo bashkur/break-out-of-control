@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeGMTK_GameJam_2020_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xDED6CF1F,
-				0xA508139D,
+				0xF5B00C32,
+				0x1BC933B9,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

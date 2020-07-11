@@ -1,0 +1,20 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-GMTK_GameJam_2020-0021.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\GMTK_GameJam_2020Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\Enemy.cpp.obj"
+"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\EnemyManager.cpp.obj"
+"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\GMTK_GameJam_2020.cpp.obj"
+"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\GMTK_GameJam_2020GameModeBase.cpp.obj"
+"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\Enemy.gen.cpp.obj"
+"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\EnemyManager.gen.cpp.obj"
+"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\GMTK_GameJam_2020.init.gen.cpp.obj"
+"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\GMTK_GameJam_2020GameModeBase.gen.cpp.obj"
+"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\Default.rc2.res"
+/OUT:"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\UE4Editor-GMTK_GameJam_2020-0021.lib"
+/INCLUDE:IMPLEMENT_MODULE_GMTK_GameJam_2020
