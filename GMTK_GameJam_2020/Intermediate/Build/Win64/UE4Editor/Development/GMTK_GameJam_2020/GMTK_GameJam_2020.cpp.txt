@@ -1,2 +1,0 @@
-E:\MyProjects\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\Definitions.GMTK_GameJam_2020.h
-E:\MyProjects\GMTK_GameJam_2020\Source\GMTK_GameJam_2020\GMTK_GameJam_2020.h

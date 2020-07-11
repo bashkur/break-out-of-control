@@ -513,3 +513,8 @@ MigrationBackup/
 .ionide/
 
 # End of https://www.toptal.com/developers/gitignore/api/unrealengine,rider,visualstudio
+GMTK_GameJam_2020/.idea/
+
+GMTK_GameJam_2020/Intermediate/
+
+GMTK_GameJam_2020/Saved/
