@@ -15,6 +15,7 @@ ABall::ABall()
 	SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("Sphere Component"));
 	MeshComponent->SetupAttachment(RootComponent);
 	SphereComponent->SetupAttachment(RootComponent);
+	SphereComponent->SetNotifyRigidBodyCollision(true);
 
 	// Use this component to drive this projectile's movement.
 	ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement Component"));
@@ -25,7 +26,7 @@ ABall::ABall()
 	ProjectileMovementComponent->Bounciness = 0.3f;
 
 	bIsActive = false;
-	damage = 1;
+	damage = 10;
 }
 
 // Called when the game starts or when spawned
