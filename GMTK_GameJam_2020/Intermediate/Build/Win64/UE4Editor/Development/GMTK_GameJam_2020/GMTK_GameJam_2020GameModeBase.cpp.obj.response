@@ -32,8 +32,8 @@
 /wd4244
 /wd4838
 /I .
-/I E:\MyProjects\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Inc\GMTK_GameJam_2020
-/I E:\MyProjects\GMTK_GameJam_2020\Source
+/I "D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Inc\GMTK_GameJam_2020"
+/I "D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Source"
 /I Runtime
 /I Runtime\TraceLog\Public
 /I Runtime\Core\Public
@@ -255,18 +255,18 @@
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\RenderDebug\public
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include
 /I ThirdParty\PhysX3\APEX_1.4\shared\internal\include
-/I "E:\Installs (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\INCLUDE"
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\INCLUDE"
 /I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"E:\MyProjects\GMTK_GameJam_2020\Intermediate\Build\Win64\GMTK_GameJam_2020Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"E:\MyProjects\GMTK_GameJam_2020\Intermediate\Build\Win64\GMTK_GameJam_2020Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"E:\MyProjects\GMTK_GameJam_2020\Intermediate\Build\Win64\GMTK_GameJam_2020Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"E:\MyProjects\GMTK_GameJam_2020\Source\GMTK_GameJam_2020\GMTK_GameJam_2020GameModeBase.cpp"
-/FI"E:\MyProjects\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\Definitions.GMTK_GameJam_2020.h"
-/Fo"E:\MyProjects\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\GMTK_GameJam_2020GameModeBase.cpp.obj"
+/FI"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\GMTK_GameJam_2020Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\GMTK_GameJam_2020Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\GMTK_GameJam_2020Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Source\GMTK_GameJam_2020\GMTK_GameJam_2020GameModeBase.cpp"
+/FI"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\Definitions.GMTK_GameJam_2020.h"
+/Fo"D:\Unreal Projects\break-out-of-control\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\GMTK_GameJam_2020GameModeBase.cpp.obj"
 /TP
 /GR-
 /W4

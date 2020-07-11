@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-GMTK_GameJam_2020.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\MyProjects\GMTK_GameJam_2020\Intermediate\Build\Win64\GMTK_GameJam_2020Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"E:\MyProjects\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\GMTK_GameJam_2020.cpp.obj"
+"E:\MyProjects\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\GMTK_GameJam_2020GameModeBase.cpp.obj"
+"E:\MyProjects\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\GMTK_GameJam_2020.init.gen.cpp.obj"
+"E:\MyProjects\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\GMTK_GameJam_2020GameModeBase.gen.cpp.obj"
+"E:\MyProjects\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\Default.rc2.res"
+/OUT:"E:\MyProjects\GMTK_GameJam_2020\Intermediate\Build\Win64\UE4Editor\Development\GMTK_GameJam_2020\UE4Editor-GMTK_GameJam_2020.lib"
+/INCLUDE:IMPLEMENT_MODULE_GMTK_GameJam_2020

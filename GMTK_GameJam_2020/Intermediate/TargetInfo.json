@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "GMTK_GameJam_2020",
-			"Path": "E:\\MyProjects\\GMTK_GameJam_2020\\Source\\GMTK_GameJam_2020.Target.cs",
+			"Path": "D:\\Unreal Projects\\break-out-of-control\\GMTK_GameJam_2020\\Source\\GMTK_GameJam_2020.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "GMTK_GameJam_2020Editor",
-			"Path": "E:\\MyProjects\\GMTK_GameJam_2020\\Source\\GMTK_GameJam_2020Editor.Target.cs",
+			"Path": "D:\\Unreal Projects\\break-out-of-control\\GMTK_GameJam_2020\\Source\\GMTK_GameJam_2020Editor.Target.cs",
 			"Type": "Editor"
 		}
 	]
