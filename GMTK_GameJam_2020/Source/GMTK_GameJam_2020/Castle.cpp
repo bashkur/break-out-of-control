@@ -67,12 +67,11 @@ void ACastle::Collapse()
 void ACastle::OnBeginHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	///DEBUG
-	if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("I Hit: %s"), *OtherActor->GetName()));
-	UE_LOG(LogTemp, Warning, TEXT("Hit"));
-	
+	//if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("I Hit: %s"), *OtherActor->GetName()));
+	//UE_LOG(LogTemp, Warning, TEXT("Hit"));
 	if(OtherActor->ActorHasTag("Ball"))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Collided with"));
+		
 		ABall* OtherBall = Cast<ABall>(OtherActor);
 		if(OtherBall->bIsActive)
 		{
