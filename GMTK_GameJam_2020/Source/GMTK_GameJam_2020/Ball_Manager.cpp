@@ -36,25 +36,41 @@ void ABall_Manager::ChangeActiveBalls()
 		if(!IsValid(balls[i]))
 		{
 			balls.RemoveAt(i);
+			i--;
+			for(int j = 0; j < active_ball_indices.Num(); j++)
+			{
+				if(active_ball_indices[j] == i)
+				{
+					active_ball_indices[j] = -1;
+				}
+				if(active_ball_indices[j] > i)
+				{
+					active_ball_indices[j]--;
+				}
+			}
 		}
 	}
-	
-	for (int i=0; i < active_ball_indices.Num(); i++)
+
+	if(balls.Num() > 0)
 	{
-		if(balls[active_ball_indices[i]] != nullptr)
+		for (int i=0; i < active_ball_indices.Num(); i++)
 		{
-			balls[active_ball_indices[i]]->Activate(false);
-		}		
-		int new_index = FMath::RandRange(0, balls.Num()-1);
-		while (new_index == active_ball_indices[i] && balls.Num() > 1)
-		{
-			new_index = FMath::RandRange(0, balls.Num()-1);
+			if(active_ball_indices[i] != -1 && balls[active_ball_indices[i]] != nullptr)
+			{
+				balls[active_ball_indices[i]]->Activate(false);
+			}		
+			int new_index;
+			do
+			{
+				new_index = FMath::RandRange(0, balls.Num()-1);
+			}
+			while (balls.Num() > 1 && new_index == active_ball_indices[i]);
+			active_ball_indices[i] = new_index;
+			if(balls[active_ball_indices[i]] != nullptr)
+			{
+				balls[active_ball_indices[i]]->Activate(true);
+			}	
 		}
-		active_ball_indices[i] = new_index;
-		if(balls[active_ball_indices[i]] != nullptr)
-		{
-			balls[active_ball_indices[i]]->Activate(true);
-		}	
 	}
 }
 
