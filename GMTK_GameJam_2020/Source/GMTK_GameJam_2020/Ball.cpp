@@ -25,9 +25,12 @@ ABall::ABall()
 
 	bIsActive = false;
 	damage = 10;
+
+	MeshComponent->OnComponentHit.AddDynamic(this, &ABall::OnCompHit);
 }
 
 // Called when the game starts or when spawned
+
 void ABall::BeginPlay()
 {
 	Super::BeginPlay();
@@ -38,6 +41,7 @@ void ABall::BeginPlay()
 }
 
 // Called every frame
+
 void ABall::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -48,5 +52,16 @@ void ABall::Activate(bool flag)
 {
 	bIsActive = flag;
 	DynamicMaterial->SetScalarParameterValue(TEXT("Blend"), flag);
+}
+
+void ABall::OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp,
+                      FVector NormalImpulse, const FHitResult& Hit)
+{
+	/*if(OtherActor->ActorHasTag("paddle"))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Physics"));
+		MeshComponent->AddImpulse(FVector(0, GetInputAxisValue("MovePaddle") * 1000.0f, 0));
+		MeshComponent->AddTorqueInRadians(FVector(0, 0, GetInputAxisValue("MovePaddle") * 1000.0f), NAME_None, true);		
+	}*/
 }
 
