@@ -39,6 +39,9 @@ public:
 	UFUNCTION()
 	void OnCompHit(class UPrimitiveComponent* HitComp, class AActor* OtherActor,
                                class UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+
+	UPROPERTY(BlueprintReadWrite)
+	bool PlayNoise;
 	
 protected:
 	// Called when the game starts or when spawned

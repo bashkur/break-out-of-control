@@ -25,6 +25,9 @@ public:
 	UPROPERTY(EditAnywhere)
 	float moveSpeed;
 
+	UPROPERTY(BlueprintReadWrite)
+	bool playDeathNoise;
+
 	UFUNCTION()
     void OnBeginHit(class UPrimitiveComponent* HitComp, class AActor* OtherActor,
                                class UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);

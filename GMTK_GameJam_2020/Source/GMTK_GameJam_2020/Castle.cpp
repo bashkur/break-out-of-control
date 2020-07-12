@@ -18,6 +18,7 @@ ACastle::ACastle()
 	MeshComponent->OnComponentHit.AddDynamic(this, &ACastle::OnBeginHit);
 
 	HP = 100.0f;
+	PlayHitNoise = false;
 }
 
 // Called when the game starts or when spawned
@@ -50,6 +51,10 @@ void ACastle::Tick(float DeltaTime)
 void ACastle::CastleDamage(float damage)
 {
 	HP -= damage;
+	if(HP > 0)
+	{
+		PlayHitNoise = true;
+	}
 }
 
 void ACastle::Collapse()
@@ -72,7 +77,8 @@ void ACastle::OnBeginHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrim
 		if(OtherBall->bIsActive)
 		{
 			CastleDamage(OtherBall->damage);
-			OtherActor->Destroy();
+			OtherBall->bIsActive = false;
+			//OtherActor->Destroy();
 		}
 	}
 }

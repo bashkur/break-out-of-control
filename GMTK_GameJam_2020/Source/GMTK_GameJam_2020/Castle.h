@@ -23,6 +23,9 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	USoundCue* SoundCue;
+
+	UPROPERTY(EditAnywhere)
+	USoundCue* HitSoundCue;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	float HP;
@@ -31,6 +34,8 @@ public:
     void OnBeginHit(class UPrimitiveComponent* HitComp, class AActor* OtherActor,
                                class UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
+	UPROPERTY(BlueprintReadWrite)
+	bool PlayHitNoise;
 	
 	void Collapse();
 
