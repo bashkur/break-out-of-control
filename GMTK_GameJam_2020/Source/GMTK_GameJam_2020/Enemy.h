@@ -25,6 +25,10 @@ public:
 	UPROPERTY(EditAnywhere)
 	float moveSpeed;
 
+	UFUNCTION()
+    void OnBeginHit(class UPrimitiveComponent* HitComp, class AActor* OtherActor,
+                               class UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

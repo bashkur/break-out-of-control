@@ -22,7 +22,7 @@ public:
     TArray<class ABall*> balls;
 
 	UPROPERTY(EditAnywhere)
-	TSubclassOf<class ABall> mBalls;
+	TArray<TSubclassOf<class ABall>> mBalls;
 	
 protected:
 	// Called when the game starts or when spawned
