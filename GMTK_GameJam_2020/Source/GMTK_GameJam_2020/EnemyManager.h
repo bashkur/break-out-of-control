@@ -23,6 +23,20 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class AActor> Enemy;
+
+	UPROPERTY(EditAnywhere)
+	int columns;
+	UPROPERTY(EditAnywhere)
+	int rows;
+	UPROPERTY(EditAnywhere)
+	float horizontalSpacing;
+	UPROPERTY(EditAnywhere)
+	float verticalSpacing;
+
+	void Spawn(FVector positionOffset);
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
