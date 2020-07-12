@@ -18,6 +18,7 @@ ACastle::ACastle()
 	MeshComponent->OnComponentHit.AddDynamic(this, &ACastle::OnBeginHit);
 
 	HP = 100.0f;
+	PlayHitNoise = false;
 }
 
 // Called when the game starts or when spawned
@@ -50,6 +51,10 @@ void ACastle::Tick(float DeltaTime)
 void ACastle::CastleDamage(float damage)
 {
 	HP -= damage;
+	if(HP > 0)
+	{
+		PlayHitNoise = true;
+	}
 }
 
 void ACastle::Collapse()
@@ -62,17 +67,17 @@ void ACastle::Collapse()
 void ACastle::OnBeginHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	///DEBUG
-	if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("I Hit: %s"), *OtherActor->GetName()));
-	UE_LOG(LogTemp, Warning, TEXT("Hit"));
-	
+	//if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("I Hit: %s"), *OtherActor->GetName()));
+	//UE_LOG(LogTemp, Warning, TEXT("Hit"));
 	if(OtherActor->ActorHasTag("Ball"))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Collided with"));
+		
 		ABall* OtherBall = Cast<ABall>(OtherActor);
 		if(OtherBall->bIsActive)
 		{
 			CastleDamage(OtherBall->damage);
-			OtherActor->Destroy();
+			OtherBall->bIsActive = false;
+			//OtherActor->Destroy();
 		}
 	}
 }

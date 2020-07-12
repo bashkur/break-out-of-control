@@ -27,6 +27,8 @@ ABall::ABall()
 	damage = 10;
 
 	MeshComponent->OnComponentHit.AddDynamic(this, &ABall::OnCompHit);
+
+	PlayNoise = false;
 }
 
 // Called when the game starts or when spawned
@@ -57,11 +59,9 @@ void ABall::Activate(bool flag)
 void ABall::OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp,
                       FVector NormalImpulse, const FHitResult& Hit)
 {
-	/*if(OtherActor->ActorHasTag("paddle"))
+	if(OtherActor->ActorHasTag("paddle"))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Physics"));
-		MeshComponent->AddImpulse(FVector(0, GetInputAxisValue("MovePaddle") * 1000.0f, 0));
-		MeshComponent->AddTorqueInRadians(FVector(0, 0, GetInputAxisValue("MovePaddle") * 1000.0f), NAME_None, true);		
-	}*/
+			PlayNoise = true;
+	}
 }
 

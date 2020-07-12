@@ -15,6 +15,7 @@ AEnemy::AEnemy()
 	PrimaryActorTick.bCanEverTick = true;
 
 	Mesh->OnComponentHit.AddDynamic(this, &AEnemy::OnBeginHit);
+	playDeathNoise = false;
 }
 
 // Called when the game starts or when spawned
@@ -39,7 +40,7 @@ void AEnemy::OnBeginHit(class UPrimitiveComponent* HitComp, class AActor* OtherA
 		ABall* OtherBall = Cast<ABall>(OtherActor);
 		if(OtherBall->bIsActive)
 		{
-			this->Destroy();
+			playDeathNoise = true;
 		}
 	}
 }
