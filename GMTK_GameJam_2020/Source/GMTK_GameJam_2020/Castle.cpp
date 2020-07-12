@@ -15,9 +15,7 @@ ACastle::ACastle()
 
 	MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh Component"));
 	RootComponent = MeshComponent;
-	BoxComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("Box Component"));
-	BoxComponent->SetNotifyRigidBodyCollision(true);
-	BoxComponent->OnComponentHit.AddDynamic(this, &ACastle::OnBeginHit);
+	MeshComponent->OnComponentHit.AddDynamic(this, &ACastle::OnBeginHit);
 
 	HP = 100.0f;
 }
@@ -56,15 +54,17 @@ void ACastle::CastleDamage(float damage)
 
 void ACastle::Collapse()
 {
-	/*UE_LOG(LogTemp, Warning, TEXT("Game Over"));
+	UE_LOG(LogTemp, Warning, TEXT("Game Over"));
 	FTimerHandle UnusedHandle;
-	GetWorldTimerManager().SetTimer(UnusedHandle, this, &ACastle::RestartGame, 4.0f, false);*/
+	GetWorldTimerManager().SetTimer(UnusedHandle, this, &ACastle::RestartGame, 4.0f, false);
 }
 
 void ACastle::OnBeginHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
+	///DEBUG
 	if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("I Hit: %s"), *OtherActor->GetName()));
 	UE_LOG(LogTemp, Warning, TEXT("Hit"));
+	
 	if(OtherActor->ActorHasTag("Ball"))
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Collided with"));
@@ -72,9 +72,8 @@ void ACastle::OnBeginHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrim
 		if(OtherBall->bIsActive)
 		{
 			CastleDamage(OtherBall->damage);
+			OtherActor->Destroy();
 		}
-
-		OtherActor->Destroy();
 	}
 }
 

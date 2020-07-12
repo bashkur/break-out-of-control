@@ -3,6 +3,8 @@
 
 #include "Ball.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "Materials/MaterialInstanceDynamic.h"
+#include "Materials/MaterialInterface.h"
 
 // Sets default values
 ABall::ABall()
@@ -12,10 +14,6 @@ ABall::ABall()
 
 	MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh Component"));
 	RootComponent = MeshComponent;
-	SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("Sphere Component"));
-	MeshComponent->SetupAttachment(RootComponent);
-	SphereComponent->SetupAttachment(RootComponent);
-	SphereComponent->SetNotifyRigidBodyCollision(true);
 
 	// Use this component to drive this projectile's movement.
 	ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement Component"));
@@ -33,7 +31,10 @@ ABall::ABall()
 void ABall::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	UMaterialInterface* Material = MeshComponent->GetMaterial(0);
+	DynamicMaterial = UMaterialInstanceDynamic::Create(Material, nullptr);
+	MeshComponent->SetMaterial(0, DynamicMaterial);
 }
 
 // Called every frame
@@ -46,5 +47,6 @@ void ABall::Tick(float DeltaTime)
 void ABall::Activate(bool flag)
 {
 	bIsActive = flag;
+	DynamicMaterial->SetScalarParameterValue(TEXT("Blend"), flag);
 }
 

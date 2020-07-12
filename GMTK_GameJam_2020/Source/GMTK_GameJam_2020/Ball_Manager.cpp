@@ -16,30 +16,45 @@ ABall_Manager::ABall_Manager()
 void ABall_Manager::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	FTimerHandle UnusedHandle;
+	GetWorldTimerManager().SetTimer(UnusedHandle, this, &ABall_Manager::ChangeActiveBalls,
+                                    FMath::RandRange(2, 4), true);
 }
 
 // Called every frame
 void ABall_Manager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	FTimerHandle UnusedHandle;
-	GetWorldTimerManager().SetTimer(UnusedHandle, this, &ABall_Manager::ChangeActiveBalls,
-                                    FMath::RandRange(2, 4), true);	
+	
 }
 
 void ABall_Manager::ChangeActiveBalls()
 {
+	for(int i=0; i<balls.Num(); i++)
+	{
+		if(!IsValid(balls[i]))
+		{
+			balls.RemoveAt(i);
+		}
+	}
+	
 	for (int i=0; i < active_ball_indices.Num(); i++)
 	{
-		balls[active_ball_indices[i]]->Activate(false);
+		if(balls[active_ball_indices[i]] != nullptr)
+		{
+			balls[active_ball_indices[i]]->Activate(false);
+		}		
 		int new_index = FMath::RandRange(0, balls.Num()-1);
-		while (new_index == active_ball_indices[i])
+		while (new_index == active_ball_indices[i] && balls.Num() > 1)
 		{
 			new_index = FMath::RandRange(0, balls.Num()-1);
 		}
-		balls[new_index]->Activate(true);
+		active_ball_indices[i] = new_index;
+		if(balls[active_ball_indices[i]] != nullptr)
+		{
+			balls[active_ball_indices[i]]->Activate(true);
+		}	
 	}
 }
 
