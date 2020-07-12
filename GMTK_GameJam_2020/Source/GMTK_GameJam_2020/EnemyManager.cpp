@@ -33,7 +33,7 @@ void AEnemyManager::Tick(float DeltaTime)
 //spawn an actor
 void AEnemyManager::Spawn(FVector position)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Spawning!"));
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Spawning!"));
 	if (!Enemy)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Nothing to Spawn"));
