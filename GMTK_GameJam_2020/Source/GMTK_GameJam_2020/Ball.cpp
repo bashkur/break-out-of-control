@@ -12,10 +12,6 @@ ABall::ABall()
 
 	MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh Component"));
 	RootComponent = MeshComponent;
-	SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("Sphere Component"));
-	MeshComponent->SetupAttachment(RootComponent);
-	SphereComponent->SetupAttachment(RootComponent);
-	SphereComponent->SetNotifyRigidBodyCollision(true);
 
 	// Use this component to drive this projectile's movement.
 	ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement Component"));

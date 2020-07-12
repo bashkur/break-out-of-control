@@ -22,9 +22,6 @@ public:
     UStaticMeshComponent* MeshComponent;
 
 	UPROPERTY(EditAnywhere)
-	UBoxComponent* BoxComponent;
-
-	UPROPERTY(EditAnywhere)
 	USoundCue* SoundCue;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)

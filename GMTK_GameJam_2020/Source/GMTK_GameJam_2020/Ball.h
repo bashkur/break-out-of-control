@@ -24,9 +24,6 @@ public:
 	UStaticMeshComponent* MeshComponent;
 
 	UPROPERTY(EditAnywhere)
-	USphereComponent* SphereComponent;
-
-	UPROPERTY(EditAnywhere)
 	UProjectileMovementComponent* ProjectileMovementComponent;
 
 	UPROPERTY(EditAnywhere)
