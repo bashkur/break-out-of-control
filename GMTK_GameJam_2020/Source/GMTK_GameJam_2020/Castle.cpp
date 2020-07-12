@@ -54,9 +54,9 @@ void ACastle::CastleDamage(float damage)
 
 void ACastle::Collapse()
 {
-	/*UE_LOG(LogTemp, Warning, TEXT("Game Over"));
+	UE_LOG(LogTemp, Warning, TEXT("Game Over"));
 	FTimerHandle UnusedHandle;
-	GetWorldTimerManager().SetTimer(UnusedHandle, this, &ACastle::RestartGame, 4.0f, false);*/
+	GetWorldTimerManager().SetTimer(UnusedHandle, this, &ACastle::RestartGame, 4.0f, false);
 }
 
 void ACastle::OnBeginHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
@@ -72,9 +72,8 @@ void ACastle::OnBeginHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrim
 		if(OtherBall->bIsActive)
 		{
 			CastleDamage(OtherBall->damage);
+			OtherActor->Destroy();
 		}
-
-		OtherActor->Destroy();
 	}
 }
 

@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	ABall_Manager();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere)
     TArray<int> active_ball_indices;
 
 	UPROPERTY(EditAnywhere)

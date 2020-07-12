@@ -11,6 +11,8 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Ball.generated.h"
 
+class UMaterialInstanceDynamic;
+
 UCLASS()
 class GMTK_GAMEJAM_2020_API ABall : public AActor
 {
@@ -31,6 +33,8 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	float damage;
+
+	UMaterialInstanceDynamic* DynamicMaterial;
 	
 protected:
 	// Called when the game starts or when spawned
@@ -42,4 +46,6 @@ public:
 
 	//Makes this ball active or inactive
 	void Activate(bool flag);
+
+	
 };
