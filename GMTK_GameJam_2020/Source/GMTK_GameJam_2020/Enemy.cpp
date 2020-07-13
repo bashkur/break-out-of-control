@@ -1,8 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
-#include "Ball.h"
 #include "Enemy.h"
+#include "Ball.h"
 
 // Sets default values
 AEnemy::AEnemy()
